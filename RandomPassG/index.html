@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+     .container{
+         width:100vw;
+         height: 100vh;
+         background-color: blueviolet;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+     .card{
+         width:400px;
+         height:450px;
+         padding: 20px;
+         background-color: rgba(0,0,0,0.2);
+         display:flex;
+         flex-direction: column;
+         justify-content: space-between;
+     }
+     .card>h2{ font-weight:800; color: cornsilk; font-size: 30px; }
+
+     .result{
+         height: 50px;
+         background-color: #ffff;
+         margin-bottom: 20px;
+         position: relative;
+     }
+     .result > span{ width:200px;
+        /* background-color: tomato; */
+        font-size: 22px;
+    }
+     .result>img{ position: absolute; width:40px;
+                  right:2%; top:10%; 
+                  /* background-color: blue; */
+                }
+     .items{
+         padding: 10px 10px;
+         display: flex;
+         justify-content: space-between;
+         background-color: rgba(253, 253, 253, 0.747);
+         border-radius: 5px;
+     }
+     .btn{
+         font-weight: 800;
+         font-size: 18px;
+         padding: 5px;
+         background-color: darkblue;
+         color: white;
+         margin-top: 15px;
+     }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+           <h2>Password Generator</h2>
+           <div class="result">
+               <span id="result">jdbcajkdskjgdljvhfljasdhvh</span> 
+               <img id="clipboard" src="copy.png" alt="copyimg">
+           </div>
+            <div class="items" >
+             <lable>Enter Password Length</lable>   <input type="number" id="length">
+            </div>
+            <div class="items" >
+                <label for="Uppercase">Include Uppercase </label><input type="checkbox" id="uppercase">
+             </div>
+
+             <div class="items">
+                <label for="Lowercase">Include Lowercase</label><input type="checkbox" id="lowercase">
+             </div>
+
+             <div class="items">
+                <label for="Number">Include Number</label><input type="checkbox" id="number">
+             </div>
+
+             <div class="items">
+                <label for="Symbol">Include Special Characters</label><input type="checkbox" id="symbol">
+             </div>
+<button class="btn" id="generate">
+    Generate Password
+</button>
+
+        </div>
+    </div>
+    <script src="passwordGenerator.js"></script>
+</body>
+</html>
